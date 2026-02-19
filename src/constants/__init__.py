@@ -1,5 +1,9 @@
 import os
 from datetime import date
+from dotenv import load_dotenv, find_dotenv
+
+# Load .env automatically for any entrypoint importing constants (app, demo, pipeline, etc.)
+load_dotenv(find_dotenv(), override=False)
 
 # For MongoDB connection
 DATABASE_NAME = "proj1"
